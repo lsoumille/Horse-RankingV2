@@ -5,6 +5,7 @@ $(document).ready(Onready);
 		$('.depCat').change(function (){
 				removeFromCombos(this.id);
 			});
+		$('#newRace').submit(OnSubmitRace);
 		console.log("bonjour");
 	};
 	/*
@@ -92,5 +93,21 @@ $(document).ready(Onready);
 				}
 			}
 		}
+	}
+
+	function OnSubmitRace(data) {
+		console.log("submit js");
+		$.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            data: $(this).serialize(),
+        })
+        .done(function(result){
+            $("#resultat").html(result);
+        })
+        .error(function(){
+            alert("Erreur, veuillez recharger la page");
+        });
+        return false;
 	}	
 

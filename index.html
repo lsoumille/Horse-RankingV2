@@ -63,7 +63,7 @@
         </nav>
         <div id="page-wrapper">
             <div class="container-fluid">
-                <form class="form-horizontal">
+                <form class="form-horizontal" id="newRace" method="post" action="php/processRace.php">
                     <fieldset>
                         <!-- Form Name -->
                         <legend>Nouvelle course</legend>
@@ -146,6 +146,11 @@
                             <div class="col-md-4">
                                 <button id="validate" name="validate" class="btn btn-default">Valider</button>
                             </div>
+                        </div>
+                        <div class="col-md-4">
+                        	<label id="resultat">
+                        		
+                        	</label>
                         </div>
                     </fieldset>
                 </form>
