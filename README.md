@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Start Bootstrap](http://startbootstrap.com/) - [SB Admin](http://startbootstrap.com/template-overviews/sb-admin/)
 
 [SB Admin](http://startbootstrap.com/template-overviews/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
@@ -24,3 +25,7 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-sb-admin/blob/gh-pages/LICENSE) license.
+=======
+# Horse-RankingV2
+Adaptation du l'application graphique Horse-Ranking en application web
+>>>>>>> 92f36c55301371c4b7550c953567d4d99200d3b9
