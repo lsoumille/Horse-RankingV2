@@ -49,7 +49,7 @@
                         <a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Nouvelle course</a>
                     </li>
                     <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Résultat</a>
+                        <a href="resultat.html"><i class="fa fa-fw fa-bar-chart-o"></i> Résultat</a>
                     </li>
                     <li>
                         <a href="tables.html"><i class="fa fa-fw fa-table"></i> Catégorie</a>
@@ -71,7 +71,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="selectbasic">Catégorie</label>
                             <div class="col-md-5">
-                                <select id="raceCat" name="selectbasic" class="form-control">
+                                <select id="raceCat" name="raceCat" class="form-control">
                                 	<option value="empty"></option>
                                 </select>
                             </div>
@@ -136,7 +136,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="others">8 + :</label>
                             <div class="col-md-5">
-                                <select id="others" name="others" class="form-control depCat" multiple="multiple">
+                                <select id="others" name="others[]" class="form-control depCat" multiple="multiple">
                                 </select>
                             </div>
                         </div>
