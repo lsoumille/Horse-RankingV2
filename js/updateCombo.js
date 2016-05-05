@@ -6,6 +6,9 @@ $(document).ready(Onready);
 				removeFromCombos(this.id);
 			});
 		$('#newRace').submit(OnSubmitRace);
+		$.ajaxSetup({
+  			cache:false
+		});
 		console.log("bonjour");
 	};
 	/*
@@ -93,7 +96,7 @@ $(document).ready(Onready);
 				}
 			}
 		}
-	}
+	};
 
 	function OnSubmitRace(data) {
 		console.log("submit js");
@@ -109,5 +112,5 @@ $(document).ready(Onready);
             alert("Erreur, veuillez recharger la page");
         });
         return false;
-	}	
+	};	
 
