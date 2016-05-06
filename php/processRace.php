@@ -1,6 +1,12 @@
 
 <?php
 	require("Database.php");
+
+	session_start();
+	if (! isset($_SESSION['login'])) {
+		echo $resultat = "Vous n'êtes pas connecté";
+	}
+    
 	/*if(isset ($_POST['first']){
 		echo $_POST['first'];
 	} else {

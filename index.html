@@ -23,121 +23,33 @@
         <![endif]-->
     </head>
     <body>
-        <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="index.html">Horse Ranking</a>
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
-                </li>
-            </ul>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Nouvelle course</a>
-                    </li>
-                    <li>
-                        <a href="resultat.html"><i class="fa fa-fw fa-bar-chart-o"></i> Résultat</a>
-                    </li>
-                    <li>
-                        <a href="addCat.html"><i class="fa fa-fw fa-table"></i> Catégorie</a>
-                    </li>
-                    <li>
-                        <a href="addPers.html"><i class="fa fa-fw fa-edit"></i>Personnes</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </nav>
         <div id="page-wrapper">
             <div class="container-fluid">
-                <form class="form-horizontal" id="newRace" method="post" action="php/processRace.php">
+                <form class="form-horizontal" id="connection" method="post" action="php/connection.php">
                     <fieldset>
                         <!-- Form Name -->
-                        <legend>Nouvelle course</legend>
+                        <legend>Connexion</legend>
+                        <!-- Select Basic -->
                         <!-- Select Basic -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="selectbasic">Catégorie</label>
+                            <label class="col-md-4 control-label" for="selectbasic">Identifiant :</label>
                             <div class="col-md-5">
-                                <select id="raceCat" name="raceCat" class="form-control">
-                                	<option value="empty"></option>
-                                </select>
+                                <input id="identifiant" name="identifiant" required="true" class="form-control" type="text">
                             </div>
-                        </div>
-                        <!-- Select Basic -->
+                        </div>                       
+                        <!-- Select Basic -->                     
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="first">1 :</label>
+                            <label class="col-md-4 control-label" for="selectbasic">Mot de passe :</label>
                             <div class="col-md-5">
-                                <select id="first" name="first" class="form-control depCat">                                	
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Basic -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="second">2 :</label>
-                            <div class="col-md-5">
-                                <select id="second" name="second" class="form-control depCat">                         
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Basic -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="third">3 :</label>
-                            <div class="col-md-5">
-                                <select id="third" name="third" class="form-control depCat">
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Basic -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="fourth">4 :</label>
-                            <div class="col-md-5">
-                                <select id="fourth" name="fourth" class="form-control depCat">                
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Basic -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="fifth">5 :</label>
-                            <div class="col-md-5">
-                                <select id="fifth" name="fifth" class="form-control depCat">
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Basic -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="sixth">6 :</label>
-                            <div class="col-md-5">
-                                <select id="sixth" name="sixth" class="form-control depCat">
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Basic -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="seventh">7 :</label>
-                            <div class="col-md-5">
-                                <select id="seventh" name="seventh" class="form-control depCat">                                
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Select Multiple -->
-                        <div class="form-group">
-                            <label class="col-md-4 control-label" for="others">8 + :</label>
-                            <div class="col-md-5">
-                                <select id="others" name="others[]" class="form-control depCat" multiple="multiple">
-                                </select>
+                                <input id="password" name="password" class="form-control" type="password">
                             </div>
                         </div>
                         <!-- Button -->
@@ -167,6 +79,6 @@
         <script src="js/plugins/morris/morris.min.js"></script>
         <script src="js/plugins/morris/morris-data.js"></script>-->
         <!-- Scripts -->
-        <script src="js/updateCombo.js"></script>
+        <script src="js/connexion.js"></script>
     </body>
 </html>

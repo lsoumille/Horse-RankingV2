@@ -45,6 +45,7 @@ $(document).ready(Onready);
 					newUsers.nbPoint = data[i].nbPoints;	
 					newUsers.idCat = res;	
 					usersInCat.push(newUsers);
+					console.log(newUsers.name);
 				}
 			}
 			var nbCombos = document.getElementsByClassName('depCat').length;
