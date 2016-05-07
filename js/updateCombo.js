@@ -9,7 +9,6 @@ $(document).ready(Onready);
 		$.ajaxSetup({
   			cache:false
 		});
-		console.log("bonjour");
 	};
 	/*
 	add the options for the combobox which contains the categories
@@ -27,8 +26,7 @@ $(document).ready(Onready);
 		})
 		.error(function(){
 			alert("Erreur dans la récupération des catégories");
-		});
-		console.log("catgeories");
+		});		
 	};
 	/*
 	add the jockeys corresponding to the category in the comboboxes
@@ -99,8 +97,7 @@ $(document).ready(Onready);
 		}
 	};
 
-	function OnSubmitRace(data) {
-		console.log("submit js");
+	function OnSubmitRace(data) {		
 		$.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),
