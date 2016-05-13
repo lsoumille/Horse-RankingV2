@@ -10,7 +10,8 @@
 	$maxId = 0;
 	for ($j = 0 ; $j < count($allJockeys) ; ++$j)
 	{
-		if(strtoupper($allJockeys[$j]['name']) == strtoupper($persName)){
+		if(strtoupper($allJockeys[$j]['name']) == strtoupper($persName)
+			&& $allJockeys[$j]['idCat'] == $idCat){
 			echo $resultat = "Personne existante";
 			return;
 		}
