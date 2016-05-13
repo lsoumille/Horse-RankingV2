@@ -1,6 +1,7 @@
 $(document).ready(Onready);
 	function Onready(){
 		$('#newCat').submit(OnSubmitCat);
+		console.log("Dans le ready");
 	};
 
 	function OnSubmitCat(data) {
