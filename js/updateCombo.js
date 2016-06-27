@@ -1,5 +1,5 @@
 $(document).ready(Onready);
-	function Onready(){	
+	function Onready(){
 		loadCategories();
 		$('#raceCat').change(updateAllCombos);
 		$('.depCat').change(function (){
@@ -17,7 +17,7 @@ $(document).ready(Onready);
 		$.getJSON("json/Categories.json").done(function(data) {
 			for(var i = 0; i < data.length; ++i){
 				$('#raceCat').append(
-					$('<option>', { 
+					$('<option>', {
         				value: data[i].idCat,
         				text : data[i].nomCat
 
@@ -26,7 +26,7 @@ $(document).ready(Onready);
 		})
 		.error(function(){
 			alert("Erreur dans la récupération des catégories");
-		});		
+		});
 	};
 	/*
 	add the jockeys corresponding to the category in the comboboxes
@@ -40,8 +40,8 @@ $(document).ready(Onready);
 				if(data[i].idCat == res){
 					var newUsers = {};
 					newUsers.name = data[i].name;
-					newUsers.nbPoint = data[i].nbPoints;	
-					newUsers.idCat = res;	
+					newUsers.nbPoint = data[i].nbPoints;
+					newUsers.idCat = res;
 					usersInCat.push(newUsers);
 					console.log(newUsers.name);
 				}
@@ -55,7 +55,7 @@ $(document).ready(Onready);
 				elt.add(document.createElement("option"));
 				for(var k = 0 ; k < usersInCat.length ; ++k){
 					var opt =  document.createElement("option");
-					opt.text = usersInCat[k].name; 
+					opt.text = usersInCat[k].name;
 					opt.value = usersInCat[k].name;
 					elt.add(opt);
 				}
@@ -86,7 +86,7 @@ $(document).ready(Onready);
 		}
 		for(var z = 0 ; z < nbCombos ; ++z){
 			var elt = document.getElementsByClassName('depCat')[z];
-			if(elt.id != id){				
+			if(elt.id != id){
 				for(var i = 0 ; i < elt.options.length ; ++i){
 					if(elt.options[i].value == userToDelete){
 						elt.remove(i);
@@ -97,7 +97,7 @@ $(document).ready(Onready);
 		}
 	};
 
-	function OnSubmitRace(data) {		
+	function OnSubmitRace(data) {
 		$.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),
@@ -110,5 +110,4 @@ $(document).ready(Onready);
             alert("Erreur, veuillez recharger la page");
         });
         return false;
-	};	
-
+	};

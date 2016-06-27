@@ -1,5 +1,5 @@
 $(document).ready(Onready);
-	function Onready(){	
+	function Onready(){
 		loadCategories();
 		$('#newPers').submit(OnSubmitPers);
 	};
@@ -7,7 +7,7 @@ $(document).ready(Onready);
 		$.getJSON("json/Categories.json").done(function(data) {
 			for(var i = 0; i < data.length; ++i){
 				$('#raceCat').append(
-					$('<option>', { 
+					$('<option>', {
         				value: data[i].idCat,
         				text : data[i].nomCat
 
@@ -21,7 +21,6 @@ $(document).ready(Onready);
 	};
 
 	function OnSubmitPers(data) {
-		console.log("submit js");
 		$.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),
@@ -29,9 +28,10 @@ $(document).ready(Onready);
         })
         .done(function(result){
             $("#resultat").html(result);
+						$("#persName").value = "";
         })
         .error(function(){
             alert("Erreur, veuillez recharger la page");
         });
         return false;
-	};	
+	};
