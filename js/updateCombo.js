@@ -46,6 +46,10 @@ $(document).ready(Onready);
 					console.log(newUsers.name);
 				}
 			}
+			//sort using alphabetic order
+			usersInCat.sort(function(a,b) {
+				return a.name > b.name;
+			});
 			var nbCombos = document.getElementsByClassName('depCat').length;
 			for(var j = 0 ; j < nbCombos ; ++j){
 				var elt = document.getElementsByClassName('depCat')[j];
@@ -105,6 +109,7 @@ $(document).ready(Onready);
         })
         .done(function(result){
             $("#resultat").html(result);
+						
         })
         .error(function(){
             alert("Erreur, veuillez recharger la page");
