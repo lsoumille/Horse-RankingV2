@@ -5,7 +5,6 @@ $(document).ready(Onready);
 	};
 
 	function OnSubmitCat(data) {
-		console.log("submit js");
 		$.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),
@@ -18,4 +17,4 @@ $(document).ready(Onready);
             alert("Erreur, veuillez recharger la page");
         });
         return false;
-	};	
+	};

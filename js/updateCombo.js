@@ -47,9 +47,15 @@ $(document).ready(Onready);
 				}
 			}
 			//sort using alphabetic order
-			usersInCat.sort(function(a,b) {
-				return a.name > b.name;
-			});
+			usersInCat.sort(function (a,b){
+				if(a.name > b.name){
+					return 1;
+				}
+				if(a.name < b.name){
+					return -1;
+				}
+				return 0;
+			})
 			var nbCombos = document.getElementsByClassName('depCat').length;
 			for(var j = 0 ; j < nbCombos ; ++j){
 				var elt = document.getElementsByClassName('depCat')[j];
@@ -109,7 +115,7 @@ $(document).ready(Onready);
         })
         .done(function(result){
             $("#resultat").html(result);
-						
+
         })
         .error(function(){
             alert("Erreur, veuillez recharger la page");

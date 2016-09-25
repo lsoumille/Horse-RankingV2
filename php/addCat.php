@@ -17,7 +17,7 @@
 			$maxId = $allCats[$j]['idCat'];
 		}
 	}
-	$newCat = (object) array('nomCat' => $catName, 'idCat' => ++$maxId);
+	$newCat = (object) array('nomCat' => strtoupper($catName), 'idCat' => ++$maxId);
 	array_push($allCats, $newCat);
 	writeCatDatabase($allCats);
 	echo $resultat = "Catégorie ajoutée";

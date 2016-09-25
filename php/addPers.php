@@ -16,7 +16,7 @@
 			return;
 		}
 	}
-	$newPers = (object) array('name' => $persName, 'nbPoints' => 0, 'idCat' => $idCat);
+	$newPers = (object) array('name' => strtoupper($persName), 'nbPoints' => 0, 'idCat' => $idCat);
 	array_push($allJockeys, $newPers);
 	writeJockeyDatabase($allJockeys);
 	echo $resultat = "Personne ajoutée";
