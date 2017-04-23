@@ -47,7 +47,7 @@ var rows = [
 		}
 		$.getJSON("json/Participants.json").done(function(data) {
 			for(var i = 0; i < data.length; ++i){
-				if(data[i].idCat == res){
+				if(data[i].idCat == res && data[i].nbPoints != 0){
 					var newUsers = {};
 					newUsers.name = data[i].name;
 					newUsers.nbPoint = data[i].nbPoints;	

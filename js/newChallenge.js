@@ -1,11 +1,9 @@
 $(document).ready(Onready);
 	function Onready(){
-		$('#newCat').submit(OnSubmitCat);
-		console.log("Dans le ready");
+		$('#newChallenge').submit(OnSubmitNewChallenge);
 	};
 
-	function OnSubmitCat(data) {
-		console.log("submit js");
+	function OnSubmitNewChallenge(data) {
 		$.ajax({
             type: $(this).attr("method"),
             url: $(this).attr("action"),

@@ -43,7 +43,7 @@
                     <li>
                         <a href="accueil.html"><i class="fa fa-fw fa-dashboard"></i>Nouvelle course</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="resultat.html"><i class="fa fa-fw fa-bar-chart-o"></i> Résultat</a>
                     </li>
                     <li>
@@ -52,7 +52,7 @@
                     <li>
                         <a href="addPers.html"><i class="fa fa-fw fa-edit"></i>Personnes</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="newChallenge.html"><i class="fa fa-fw fa-repeat"></i>Demarrer une nouvelle année</a>
                     </li>
                 </ul>
@@ -61,40 +61,21 @@
         </nav>
         <div id="page-wrapper">
             <div class="container-fluid">
-                <form class="form-horizontal">
+                <form class="form-horizontal" id="newChallenge" method="post" action="php/startNewChallenge.php">
                     <fieldset>
                         <!-- Form Name -->
-                        <legend>Resultat</legend>
-                        <!-- Select Basic -->
+                        <legend>Mettre tous les points à 0</legend>
+                       <!-- Button -->
                         <div class="form-group">
-                            <label class="col-md-1" for="selectbasic">Catégorie</label>
-                            <div class="col-md-5">
-                                <select id="raceCat" name="raceCat" class="form-control">
-                                	<option value="empty"></option>
-                                </select>
-                            </div>
+                            <label class="col-md-4 control-label" for="validate"></label>
                             <div class="col-md-4">
-                                <button id="download" name="download" class="btn btn-default">Téléchargement</button>
+                                <button id="validate" name="validate" class="btn btn-default">Nouveau Challenge</button>
                             </div>
                         </div>
-                        <div class="col-md-12">
-                            <table id="tabRes" class="table table-striped table-responsive">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            Classement
-                                        </th>
-                                        <th>
-                                            Nom
-                                        </th>
-                                        <th>
-                                            Points
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
+                        <div class="col-md-4">
+                        	<label id="resultat">
+                        		
+                        	</label>
                         </div>
                     </fieldset>
                 </form>
@@ -106,17 +87,6 @@
         <script src="js/jquery.js"></script>
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
-        <!-- Morris Charts JavaScript -->
-        <!--<script src="js/plugins/morris/raphael.min.js"></script>
-        <script src="js/plugins/morris/morris.min.js"></script>
-        <script src="js/plugins/morris/morris-data.js"></script>-->
-        <script src="js/jsPDF-master/dist/jspdf.source.js"></script>
-        <!--<script src="https://mrrio.github.io/jsPDF/dist/jspdf.js"></script>-->
-        <!--<script src="https://mrrio.github.io/jsPDF/plugins/split_text_to_size.js"></script>-->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.0.16/jspdf.plugin.autotable.js"></script>-->
-        <!-- Scripts -->
-        <!--<script src="js/jsPDF-AutoTable-master/examples/libs/jspdf.min.js"></script>-->
-        <script src="js/jsPDF-AutoTable-master/examples/libs/jspdf.plugin.autotable.src.js"></script>
-        <script src="js/updateRes.js"></script>
+        <script src="js/newChallenge.js"></script>
     </body>
 </html>
