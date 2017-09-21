@@ -13,7 +13,9 @@ function getJockeyDatabase()
 
 function writeJockeyDatabase($jockeys)
 {
-	file_put_contents("../json/Participants.json", json_encode($jockeys));
+	if(isset($jockey)) {
+		file_put_contents("../json/Participants.json", json_encode($jockeys));
+	}
 }
 
 function getCatDatabase()
